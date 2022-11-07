@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0069)https://ds.newhorizonbio.com/express/placeOrder?sampleno=111113031205 -->
+<html lang="zh" class="ui-mobile">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="https://ds.newhorizonbio.com/express/placeOrder?sampleno=111113031205">-->
+    <base href=".">
+    <title>快递收取单</title>
+
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <script src="{% static 'js/commonCss.js' %}" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.mobile.structure-1.4.5.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nhapp.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nhicofont.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/iscrollAutoCreat.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mobiscroll-2.11.1.full.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/photoswipe.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/default-skin.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mobile-select-area.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mobileSelect.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/poptipshow.css' %}">
+    <!--js-->
+    <script src="{% static 'js/commonJs.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery-2.1.0.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.mobile-1.4.3.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/mobile.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/common.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.lazyload.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/swipe.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.validate.addMethod.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/photoswipe.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/photoswipe-ui-default.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/creatPhotoswipe.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/iscroll-probe.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/iscrollAutoCreat.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/mobiscroll-2.11.1.full.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/dialog.js' %}"></script>
+    <script src="{% static 'js/mobile-select-area.js' %}"></script>
+    <script src="{% static 'js/timeCountDown.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/mobileSelect.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/alertPopShow.js' %}" type="text/javascript"></script>
+    <style>
+        body iframe {
+            display: none;
+        }
+
+        .jd_formContent {
+            padding-bottom: 1.5em;
+            width: 100%;
+            background: #fff;
+            margin-top: 0.5em;
+        }
+
+        .jd_formContent:first-child {
+            border-radius: 10px 10px 0 0;
+        }
+
+        .jd_formContent:nth-child(3) .formContent_inp {
+            background: #e5ebeb;
+        }
+
+        .jd_formContent .formContent_inp, .jd_formContent .formContent_sel {
+            color: #000;
+        }
+
+        .jd_formContent:nth-child(3) .ui-input-text {
+            background: #e5ebeb;
+        }
+
+        .jd_formContent_title {
+            padding: 0 5%;
+            height: 2.25em;
+            font-size: 1em;
+            color: #3d9d90;
+            font-weight: bold;
+            border-bottom: 1px solid #3d9d90;
+            line-height: 3em;
+        }
+
+        .jd_formContent_main {
+            padding: 0 5%;
+            font-size: 1em;
+        }
+
+        .jd_formContent_main .formContent_list {
+            margin-top: 1em;
+        }
+
+        .jd_formContent_main .formContent_list i {
+            font-style: normal;
+            color: red;
+        }
+
+        .ui-select .ui-btn:before {
+            border-color: #3d9d90 transparent transparent transparent;
+        }
+
+        .jd_formContent.btnBox {
+            padding: 1.5em 0 3.5em 0;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .jd_formContent .btn {
+            float: left;
+            width: 42.5%;
+            border: none;
+            text-align: center;
+            height: 2em;
+            line-height: 2.2em;
+            margin-left: 5%;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .jd_formContent .btn:first-child {
+            background: #3d9d90;
+            box-shadow: 0 3px 2px 2px #307d74;
+        }
+
+        .jd_formContent .btn:first-child:hover {
+            background: #32beab;
+
+        }
+
+        .jd_formContent .btn:last-child {
+            background: #929d9c;
+            box-shadow: 0 3px 2px 2px #757d7c;
+        }
+
+        .jd_formContent .btn:last-child:hover {
+            background: #abb0b0;
+
+        }
+
+    </style>
+</head>
+<body style="background: #3d9d90;" class="ui-mobile-viewport ui-overlay-a">
+<div data-role="page" id="expressBillSF" style="background: rgb(61, 157, 144);" data-url="expressBillSF" tabindex="0"
+     class="ui-page ui-page-theme-a ui-page-active">
+    <div style="width:100%;"><img style="width:100%;height: 100%;" src="{% static 'images/express_top.png' %}"></div>
+    <div role="main" class="ui-content ui-content-full" style="padding: 0 1em;">
+        <form novalidate="novalidate">
+            <div class="jd_formContent">
+                <div class="jd_formContent_title">产品信息</div>
+                <div class="jd_formContent_main">
+                    <div class="formContent_list">
+                        <input id="lab" name="lab" class="form-control" type="hidden">
+                        <input id="channelCode" name="channelCode" value="998126" class="form-control" type="hidden">
+                        <input id="channelName" name="channelName" class="form-control" type="hidden">
+                        <p>产品名称<i>*</i></p>
+                        <input id="componentName" name="componentName" class="form-control" type="hidden">
+                        <select id="componentCode" name="componentCode" class="formContent_sel valid"
+                                placeholder="产品名称" aria-required="true" aria-invalid="false">
+                            <option value="1">{{ product_name }}</option>
+                            <!--                        <option value="4">常卫友</option>-->
+                            <!--                        <option value="6">宫证清</option>-->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="jd_formContent">
+                <div class="jd_formContent_title">发件人信息</div>
+                <div class="jd_formContent_main">
+                    <div class="formContent_list">
+                        <p>发件人<i>*</i></p>
+                        <input class="formContent_inp" type="text" id="jContact" name="jContact" placeholder="发件人姓名">
+                    </div>
+                    <div class="formContent_list">
+                        <p>发件人电话<i>*</i></p>
+                        <input class="formContent_inp" type="text" id="jMobile" name="jMobile" placeholder="发件人电话">
+                    </div>
+                    <div class="formContent_list">
+                        <p>发件人地址<i>*</i></p>
+                        <input class="formContent_inp" type="text" id="trigger" name="pickupAddress" placeholder="请输入省市区" style="cursor: pointer;">
+                    </div>
+                    <div class="formContent_list">
+                        <p>详细地址<i>*</i></p>
+                        <input class="formContent_inp" type="text" id="jAddress" name="jAddress" placeholder="详细地址">
+                    </div>
+                </div>
+            </div>
+            <div class="jd_formContent">
+                <div class="jd_formContent_title">收件人信息<em style="font-size: 12px; font-weight: normal; color: red;">&nbsp;&nbsp;(根据产品自动填充收件地址)</em>
+                </div>
+                <div class="jd_formContent_main">
+                    <div class="formContent_list">
+                        <p>收件人</p>
+                        <input class="formContent_inp" type="text" id="sContact" readonly="readonly" placeholder="{% if pro_addr.receiver %}{{ pro_addr.receiver }}{% else %}收件人姓名{% endif %}">
+                    </div>
+                    <div class="formContent_list">
+                        <p>收件人电话</p>
+                        <input class="formContent_inp" type="text" id="sMobile" readonly="readonly" placeholder="{% if pro_addr.receiver_phone %}{{ pro_addr.receiver_phone }}{% else %}收件人电话{% endif %}">
+                    </div>
+                    <div class="formContent_list">
+                        <p>收件人地址</p><input
+                                class="formContent_inp" type="text" id="spAddress" readonly="readonly"
+                                placeholder="{% if pro_addr.addr %}{{ pro_addr.addr }}{% else %}请选择省市区{% endif %}">
+                    </div>
+                    <div class="formContent_list">
+                        <p>详细地址</p>
+                        <input class="formContent_inp" type="text" id="sdAddress" readonly="readonly"
+                                placeholder="{% if pro_addr.addr_desc %}{{ pro_addr.addr_desc }}{% else %}详细地址{% endif %}">
+                    </div>
+                </div>
+            </div>
+            <div class="jd_formContent btnBox">
+                {% csrf_token %}
+                <button type="submit" id="btn" class="btn" data-role="none">呼叫快递</button>
+                <button type="reset" class="btn" data-role="none">重填</button>
+            </div>
+        </form>
+    </div>
+    <div style="width:100%;"><img style="width:100%;height: 100%;" src="{% static 'images/express_bills_bottom.jpg' %}">
+    </div>
+    <script>
+        $('#btn').click(function () {
+            //获取产品编码
+            var code_num = '{{ project_code }}'
+            //获取发件人姓名
+            var addresser = $('input[name="jContact"]').val();
+            //获取发件人电话
+            var addresser_phone = $('input[name="jMobile"]').val();
+            //获取发件人地址
+            var addr = $('input[name="pickupAddress"]').val();
+            //获取详细地址
+            var addr_desc = $('input[name="jAddress"]').val();
+            var csrf = $('input[name="csrfmiddlewaretoken"]').val();
+            console.log(code_num)
+            console.log(addresser)
+            console.log(addresser_phone)
+            $.post("{% url 'logistics:addresserSubmit' %}", {
+                code_num: code_num,
+                addresser: addresser,
+                addresser_phone: addresser_phone,
+                addr: addr,
+                addr_desc: addr_desc,
+                csrfmiddlewaretoken: csrf
+            }, function (data) {
+                if (data.status == 'success') {
+                    alert(data.msg);
+                    window.location.href = '{% url 'logistics:reportSchedule' %}?project_code={{ project_code }}';
+                } else {
+                    alert(data.errmsg)
+                }
+            });
+        });
+    </script>
+</div>
+
+</body>
+</html>
